@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Получение:</h2>
+    <div class="rent-profit">
+        <p>Полученный доход с проката по состоянию на выбранную дату:</p>
+        <div class="price"></div>
+    
+        <select class="cars">
+        </select>
+        <input type="date" class="start-date" name="trip-start" value="2014-09-01"
+        min="2014-01-01" max="2021-12-31">
+        <input type="date" class="end-date" name="trip-start" value="2014-10-01"
+        min="2014-01-01" max="2021-12-31">
+        <button onclick="getPrice()">get</button>
+    </div>
+    <hr>
+    <div class="vendors-cars">
+        <p>Автомобили выбранного производителя:</p>
+
+        <select class="vendors">
+        </select>
+        <button onclick="getCars()">get</button>
+        <div class="cars-vendor"></div>
+    </div>
+    <table class="table-vendors-cars" border="1" style="border-collapse: collapse;"></table>
+
+    <hr>
+    <div class="date-car">
+        <p>Свободные автомобили на выбранную дату:</p>
+        <input type="date" class="free-cars-date" name="trip-start" value="2014-10-01"
+        min="2014-01-01" max="2021-12-31">
+        <button onclick="getFreeCars()">get</button>
+    </div>
+    <table class="table-date-car" border="1" style="border-collapse: collapse;"></table>
+    <hr><hr>
+    <h2>Добавление:</h2>
+    <p>Информации об аренде для выбранного автомобиля на указанные даты:</p>
+
+    <div class="add-rent">
+        <select class="cars">
+        </select>
+        <input type="date" class="start-rent-date" name="trip-start" value="2020-01-01"
+        min="2020-01-01" max="2021-12-31">
+        <input type="text" class="start-rent-time" value="15:00:00" placeholder="15:00:00">
+        <input type="date" class="end-rent-date" name="trip-start" value="2020-01-10"
+        min="2020-01-01" max="2021-12-31">
+        <input type="text" class="end-rent-time" value="13:10:00" placeholder="12:00:00">
+        <input type="text" class="cost-rent" placeholder="Цена" value="100">
+    </div>
+    <button onclick="postRent()">Добавить</button>
+    <hr>
+    <h2>Изменение:</h2>
+    <div class="change-race">
+        <p>Данных о пробеге для выбранного автомобиля:</p>
+        <select class="cars">
+        </select>
+        <input class="input-change-race" type="text" value="7895" placeholder="23521">
+        <button onclick="changeRace()">Изменить</button>
+    </div>
+    <style> th, td { padding: 5px 10px; } p, h2 {margin: 5px 0;} </style>
+    <script src="ajax-laba2/index.js"></script>
+</body>
+</html>
